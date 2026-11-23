@@ -24,7 +24,7 @@ const CONFIG = {
     ["Do I Need Trading Experience?", "", "faqExperience"],
   ],
   // The booking calendar (NeetoCal inline embed, from NeetoCal → the meeting → Embed).
-  neetoCal: { id: "" /* TODO: Henry NeetoCal embed id */, organization: "uncapped", slug: "henry-strategy-call" },
+  neetoCal: { id: "615cfeed-ff18-4524-a52e-391b7b5c70ed", organization: "uncapped", slug: "andersen-strategy-call" },
   discordUrl: "" /* TODO: Henry free Discord invite */,
   // Investment answers that don't qualify for a call: they see the free Discord instead of the calendar.
   disqualify: ["Under $500", "I want to, but don't have the resources to fund my goals"],
