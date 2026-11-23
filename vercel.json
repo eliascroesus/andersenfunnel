@@ -1,0 +1,45 @@
+{
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "acetrades.vercel.app" }],
+      "destination": "https://acetradesjournal.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "acetradesfunnel.vercel.app" }],
+      "destination": "https://acetradesjournal.com/$1",
+      "permanent": true
+    },
+    { "source": "/", "destination": "/discord", "permanent": false },
+    { "source": "/waitlist", "destination": "/discord", "permanent": false },
+    { "source": "/not-qualified", "destination": "/discord", "permanent": false },
+    { "source": "/apply-2", "destination": "/apply", "permanent": false },
+    { "source": "/old", "destination": "/discord", "permanent": false },
+    { "source": "/old/(.*)", "destination": "/discord", "permanent": false },
+    { "source": "/redesign/(.*)", "destination": "/$1", "permanent": false }
+  ],
+  "headers": [
+    {
+      "source": "/assets/site/fonts/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/assets/ace/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
+    },
+    {
+      "source": "/(assets/vimeo-player.min.js|assets/site/ace-logo.png|favicon.ico|apple-touch-icon.png|og-ace-discord.jpg|og-ace-call.jpg)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
+    },
+    {
+      "source": "/admin",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }, { "key": "Cache-Control", "value": "no-store" }]
+    }
+  ],
+  "rewrites": [
+    { "source": "/go/:slug", "destination": "/api/go?slug=:slug" }
+  ]
+}
