@@ -507,3 +507,19 @@ h1, h2 { text-shadow: 0 2px 30px rgba(2, 6, 20, .8); }
 @media (max-width: 900px) { .ace-grid, .wins { grid-template-columns: 1fr; } .compare { grid-template-columns: 1fr; } }
 @media (max-width: 560px) { .hero h1 { font-size: 30px; letter-spacing: -.8px; } .stats { grid-template-columns: 1fr; } }
 .section > .wrap > h2 { font-size: clamp(28px, 4.2vw, 46px); letter-spacing: -1px; line-height: 1.08; }
+
+/* discord: community screenshot + youtube grid (video loads only on click, so the page stays fast) */
+.community-shot { max-width: 1000px; margin: 30px auto 0; border-radius: 16px; overflow: hidden; border: 1px solid rgba(var(--accent-rgb), .35); box-shadow: 0 0 60px -20px rgba(var(--accent-rgb), .55); }
+.community-shot img { width: 100%; height: auto; }
+.yt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 1000px; margin: 30px auto 0; }
+.yt { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; padding: 0; border: 1px solid rgba(var(--accent-rgb), .3); border-radius: 14px; overflow: hidden; cursor: pointer; background: #000; }
+.yt img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+.yt:hover img { transform: scale(1.03); }
+.yt__play { position: absolute; inset: 0; margin: auto; width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: var(--cta); color: #fff; box-shadow: 0 0 30px rgba(var(--accent-rgb), .6); }
+.yt__play svg { width: 26px; height: 26px; margin-left: 3px; }
+iframe.yt--on { border: 1px solid rgba(var(--accent-rgb), .3); }
+/* booked: FAQ video placeholders */
+.faq-ph { display: grid; gap: 34px; max-width: 960px; margin: 34px auto 0; }
+.faq-card h3 { font-size: clamp(19px, 2.4vw, 26px); font-weight: 900; text-align: center; margin-bottom: 14px; }
+.faq-ph .vph .vtxt { font-size: 13px; }
+@media (max-width: 700px) { .yt-grid { grid-template-columns: 1fr; } }
