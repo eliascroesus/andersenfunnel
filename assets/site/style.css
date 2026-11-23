@@ -523,3 +523,19 @@ iframe.yt--on { border: 1px solid rgba(var(--accent-rgb), .3); }
 .faq-card h3 { font-size: clamp(19px, 2.4vw, 26px); font-weight: 900; text-align: center; margin-bottom: 14px; }
 .faq-ph .vph .vtxt { font-size: 13px; }
 @media (max-width: 700px) { .yt-grid { grid-template-columns: 1fr; } }
+/* proof cards bottom-left */
+.ptoast { position: fixed; left: 16px; bottom: 16px; z-index: 55; width: 300px; display: flex; gap: 12px; padding: 12px 14px 12px 12px; border-radius: 16px; background: #fff; color: #111; box-shadow: 0 18px 50px -12px rgba(0,0,0,.6); opacity: 0; transform: translateY(20px); pointer-events: none; transition: opacity .35s ease, transform .35s ease; }
+.ptoast.on { opacity: 1; transform: none; pointer-events: auto; }
+.ptoast__img { flex: none; width: 52px; height: 52px; border-radius: 10px; object-fit: cover; background: #0b1020; }
+.ptoast__body { min-width: 0; }
+.ptoast__name { display: block; font-size: 12.5px; font-weight: 900; letter-spacing: 2px; }
+.ptoast__text { font-size: 13px; line-height: 1.35; color: #333; margin: 3px 0 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.ptoast__foot { display: flex; align-items: center; gap: 8px; font-size: 11px; }
+.ptoast__stars { color: #f5b301; letter-spacing: 1px; font-size: 13px; }
+.ptoast__nt { color: #888; font-family: ui-monospace, monospace; }
+.ptoast__x { position: absolute; top: 4px; right: 8px; border: 0; background: none; font-size: 16px; color: #999; cursor: pointer; }
+@media (max-width: 700px) {
+  .ptoast { left: 10px; right: 10px; bottom: 10px; width: auto; padding: 10px 12px 10px 10px; }
+  .ptoast__img { width: 44px; height: 44px; }
+  .has-sticky .ptoast, body:has(.sticky-cta.on) .ptoast { bottom: 84px; }
+}
