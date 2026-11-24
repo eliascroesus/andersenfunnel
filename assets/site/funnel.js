@@ -494,7 +494,7 @@ function confetti() {
   document.body.appendChild(c);
   const size = () => { c.width = innerWidth * dpr; c.height = innerHeight * dpr; };
   size();
-  const colors = ["#3b82f6", "#93c5fd", "#dbeafe", "#2563eb", "#ffffff"];
+  const colors = ["#5ef2c4", "#a8f9e0", "#ffd23f", "#ff8a2a", "#ffffff"];
   const bits = Array.from({ length: 160 }, (_, i) => {
     const fromLeft = i % 2 === 0, angle = (fromLeft ? -60 : -120) + (Math.random() - .5) * 50;
     const speed = (9 + Math.random() * 10) * dpr;
