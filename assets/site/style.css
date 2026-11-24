@@ -586,3 +586,25 @@ html { scroll-behavior: smooth; }
 .perks svg, .q__opt:has(input:checked) .q__key { color: #062a1f !important; }
 .yt__play, .stat b { background: var(--accent); color: #062a1f; -webkit-background-clip: border-box; background-clip: border-box; }
 .stat b { background: none; color: var(--accent); }
+
+/* lighter typography like the reference: medium-weight headlines, normal spacing, bold only on key words */
+h1, .hero h1, body[data-page="apply"] .hero h1 { font-weight: 600; letter-spacing: -.5px; line-height: 1.15; text-shadow: none; }
+body[data-page="apply"] .hero h1 { font-size: clamp(28px, 3.6vw, 44px); max-width: 960px; }
+h2, .section > .wrap > h2 { font-weight: 600; letter-spacing: -.3px; text-shadow: none; }
+.step-h { font-weight: 500; }
+.step-h b { font-weight: 700; }
+.accent, .g-word { font-weight: 600; text-shadow: none; }
+.callout { font-weight: 500; font-size: clamp(15px, 1.7vw, 20px); text-decoration-thickness: 1px; }
+.callout .accent { font-weight: 500; }
+.guarantee-line, body[data-page="apply"] .guarantee-line, .hero .lead { font-weight: 400; color: #e6e6e6; }
+.guarantee-line b, .hero .lead b { font-weight: 700; color: #fff; }
+.spots-pill { font-weight: 500; letter-spacing: 0; }
+.spots-pill b, .spots-pill u { font-weight: 600; }
+.vsl-badge { font-weight: 500; letter-spacing: .2px; }
+.btn { font-weight: 700; letter-spacing: .3px; }
+.cta-chips, .cta-chips span { font-weight: 400; }
+.kicker, .eyebrow { font-weight: 600; }
+.perks li, .trust { font-weight: 400; }
+.perks b { font-weight: 600; }
+@media (max-width: 560px) { body[data-page="apply"] .hero h1 { font-size: 26px; } }
+body[data-page="apply"] .guarantee-line b { font-weight: 700; }
