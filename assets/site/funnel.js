@@ -36,12 +36,14 @@ const CONFIG = {
 
 // The application on /apply, one question at a time: the questions first, then name, email, Instagram and phone
 // (people who opted in on /discord aren't asked for name, email or phone again).
+// Scarcity pill on /apply. Keep these TRUE: spots Henry actually has left this month.
+const SPOTS = { left: 3, total: 20 };
+
 const QUESTIONS = [
+  { key: "goal", type: "choice", title: "Where do you want to be with your trading in the next 6-12 months?",
+    options: ["💼 Trading full time and out of my 9–5", "💰 Passing evals and getting consistent payouts", "📈 Consistently profitable every month", "🌍 Free to trade from anywhere in the world"] },
   { key: "situation", type: "choice", title: "Which of these best describes your situation right now?",
     options: ["I'm already trading and want to become consistently profitable", "I keep buying evals and failing them", "I'm completely new to trading"] },
-  { key: "goal", type: "choice", title: "Where do you want to be with your trading in the next 6-12 months?",
-    options: ["💼 Trading full time and out of my 9–5", "💰 Passing evals and getting consistent payouts", "📈 Consistently profitable every month", "🌍 Free to trade from anywhere in the world", "👨‍👩‍👧 Providing more for my family"] },
-  { key: "obstacles", type: "long", title: "What challenges or obstacles do you feel are holding you back from reaching that goal?", placeholder: "Type your answer here..." },
   { key: "investment", type: "choice",
     title: "In a world where this was a PERFECT fit and we knew without a doubt we could help you hit the goals you just mentioned, how much are you willing to invest into your trading? (the software, prop firm challenges and coaching)",
     help: "Full transparency is recommended. We'll help you either way.",
@@ -673,3 +675,7 @@ if (PAGE === "booked") {
   }
   ["google", "apple", "outlook"].forEach(k => $("#addcal-" + k)?.addEventListener("click", () => analytics.once("s:addcal_" + k, { now: true })));
 }
+
+// Fill the spots numbers on /apply from SPOTS above.
+document.querySelectorAll("#spots-count").forEach(el => el.textContent = SPOTS.left + "/" + SPOTS.total);
+document.querySelectorAll("[data-spots-left]").forEach(el => el.textContent = SPOTS.left);
