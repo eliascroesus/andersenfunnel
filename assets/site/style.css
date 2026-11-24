@@ -608,3 +608,11 @@ h2, .section > .wrap > h2 { font-weight: 600; letter-spacing: -.3px; text-shadow
 .perks b { font-weight: 600; }
 @media (max-width: 560px) { body[data-page="apply"] .hero h1 { font-size: 26px; } }
 body[data-page="apply"] .guarantee-line b { font-weight: 700; }
+
+/* top glow on every page except /apply (which stays plain black like the reference) */
+body:not([data-page="apply"]) { background: radial-gradient(1100px 620px at 50% -12%, rgba(94, 242, 196, .22) 0%, rgba(94, 242, 196, .06) 45%, rgba(94, 242, 196, 0) 70%), #0a0a0a; background-repeat: no-repeat; }
+body:not([data-page="apply"])::before { content: ""; position: absolute; z-index: 0; left: 0; right: 0; top: 0; height: 900px; pointer-events: none; background: radial-gradient(1100px 650px at 50% -10%, rgba(94, 242, 196, .26) 0%, rgba(94, 242, 196, .08) 45%, rgba(94, 242, 196, 0) 72%); }
+body:not([data-page="apply"]) > * { position: relative; z-index: 1; }
+body:not([data-page="apply"]) > .ptoast, body:not([data-page="apply"]) > .sticky-cta { position: fixed; z-index: 55; }
+h1.warn { justify-content: center; gap: 14px; }
+.hero h1.warn { display: block; } .hero h1.warn svg { display: inline-block; vertical-align: -0.12em; margin-right: 12px; width: .85em; }
