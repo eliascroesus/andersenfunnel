@@ -616,3 +616,20 @@ body:not([data-page="apply"]) > * { position: relative; z-index: 1; }
 body:not([data-page="apply"]) > .ptoast, body:not([data-page="apply"]) > .sticky-cta { position: fixed; z-index: 55; }
 h1.warn { justify-content: center; gap: 14px; }
 .hero h1.warn { display: block; } .hero h1.warn svg { display: inline-block; vertical-align: -0.12em; margin-right: 12px; width: .85em; }
+
+/* footer: more room, everything dark grey */
+footer { margin-top: 120px; padding: 70px 0 80px; border-top: 1px solid #1c1c1c; background: none; }
+footer .brand, footer .foot-nav, footer .foot-nav a, footer p, footer p b, footer a { color: #5a5a5a; }
+footer .foot-nav a:hover { color: #5a5a5a; }
+footer p b { font-weight: 600; }
+
+/* /discord keeps the original bold look, in mint */
+body[data-page="discord"] h1, body[data-page="discord"] .hero h1 { font-weight: 900; letter-spacing: -1.4px; line-height: 1.04; }
+body[data-page="discord"] h2, body[data-page="discord"] .section > .wrap > h2 { font-weight: 900; letter-spacing: -1px; }
+body[data-page="discord"] .accent { font-weight: 900; text-shadow: 0 0 18px rgba(var(--accent-rgb), .25); }
+body[data-page="discord"] .hero .lead { font-weight: 500; color: var(--muted); }
+body[data-page="discord"] .hero .lead b { font-weight: 800; }
+body[data-page="discord"] .perks b, body[data-page="discord"] .kicker { font-weight: 800; }
+body[data-page="discord"] .trust { font-weight: 700; }
+body[data-page="discord"] .btn { font-weight: 900; }
+body[data-page="discord"] .hero { padding-top: 56px; }
