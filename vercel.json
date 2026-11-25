@@ -31,7 +31,7 @@
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
     },
     {
-      "source": "/(assets/vimeo-player.min.js|assets/site/ace-logo.png|favicon.ico|apple-touch-icon.png|og-ace-discord.jpg|og-ace-call.jpg)",
+      "source": "/(assets/vimeo-player.min.js|assets/site/ace-logo-bw.png|favicon.ico|apple-touch-icon.png|og-ace-discord.jpg|og-ace-call.jpg)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
     },
     {
