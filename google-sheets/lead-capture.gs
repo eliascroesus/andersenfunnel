@@ -12,8 +12,7 @@
  *   - Telegram (optional)  → booked calls are posted to a Telegram group; see the bottom of this file.
  *
  * Setup (once):
- *   1. Open the "Henry Andersen - Master Lead Sheet" spreadsheet:
- *      https://docs.google.com/spreadsheets/d/19tpKDOSIJwPxz2UbPem6_LPhI1pRYJiX_NuJLXrGQ4k/edit
+ *   1. Make a new Google Sheet named "Henry Andersen - Master Lead Sheet" (its own sheet, NOT Jean's).
  *   2. Extensions → Apps Script. Delete what's there, paste this whole file, save.
  *   3. Pick "setup" in the function dropdown and click Run. Allow access when asked.
  *      This writes the column headers into row 1.

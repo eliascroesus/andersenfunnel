@@ -645,3 +645,7 @@ body[data-page="apply"]::before { top: 0; background: radial-gradient(1100px 620
 body[data-page="apply"]::after { bottom: 0; background: radial-gradient(1100px 620px at 50% 112%, rgba(94, 242, 196, .16) 0%, rgba(94, 242, 196, .05) 45%, rgba(94, 242, 196, 0) 72%); }
 body[data-page="apply"] > * { position: relative; z-index: 1; }
 body[data-page="apply"] > .ptoast, body[data-page="apply"] > .sticky-cta { position: fixed; z-index: 55; }
+
+/* /apply: same strong top glow as the other pages, plus the bottom one */
+body[data-page="apply"]::before { height: 900px; background: radial-gradient(1100px 650px at 50% -10%, rgba(94, 242, 196, .26) 0%, rgba(94, 242, 196, .08) 45%, rgba(94, 242, 196, 0) 72%); }
+body[data-page="apply"]::after { height: 900px; background: radial-gradient(1100px 650px at 50% 110%, rgba(94, 242, 196, .24) 0%, rgba(94, 242, 196, .07) 45%, rgba(94, 242, 196, 0) 72%); }

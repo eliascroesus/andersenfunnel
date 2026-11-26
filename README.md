@@ -125,12 +125,12 @@ script editor, or use the sheet's **GoHighLevel → Check the connection**, to s
 
 | Funnel step | Pipeline / stage | Tag |
 | --- | --- | --- |
-| Opt-in on `/discord` | Discord / first stage | `jean-optin` |
-| Gave name, email and phone on the waiting list (now off; leads already in the sheet) | Discord / first stage | `jean-waitlist-started` |
-| Finished the waiting list | Discord / Waitlist, plus a note with every answer | `jean-waitlist` |
-| Finished an application (`/apply` or `/apply-2`) | Discord / Applied, plus a note with every answer | `jean-applied` |
-| "Don't qualify" investment answer | Discord / Not Qualified, plus a note with every answer | `jean-not-qualified` |
-| Booked a call | 1:1 Mentorship / first stage | `jean-booked` |
+| Opt-in on `/discord` | Discord / first stage | `ace-optin` |
+| Gave name, email and phone on the waiting list (now off; leads already in the sheet) | Discord / first stage | `ace-waitlist-started` |
+| Finished the waiting list | Discord / Waitlist, plus a note with every answer | `ace-waitlist` |
+| Finished an application (`/apply` or `/apply-2`) | Discord / Applied, plus a note with every answer | `ace-applied` |
+| "Don't qualify" investment answer | Discord / Not Qualified, plus a note with every answer | `ace-not-qualified` |
+| Booked a call | 1:1 Mentorship / first stage | `ace-booked` |
 
 The page marks those steps with a `stage` field; other single answers only update the contact's fields. So someone
 who stops part way through the waiting list is still in the Discord pipeline for the setters, with the answers they gave.
@@ -144,7 +144,7 @@ the sheet (reload the sheet once after pasting the script):
 
 - **GoHighLevel → Preview old leads (sends nothing)** counts them by funnel step.
 - **GoHighLevel → Push old leads to GoHighLevel** asks to confirm, then sends each one to the furthest step it
-  reached, with the tags of every step on the way and the answers note. They also get `jean-imported` first, so a
+  reached, with the tags of every step on the way and the answers note. They also get `ace-imported` first, so a
   workflow can leave them out (filter "Contact Tag doesn't have jean-imported"). It's safe to run again: sent rows are skipped.
 
 An old lead who comes back (finishes an application, books a call) is sent whole at that moment, as a live lead.
