@@ -90,7 +90,7 @@ and any `?utm_…` parameters. Preview deployments keep their own `.vercel.app` 
 ## Leads to Google Sheets
 
 Every opt-in is added as a row to the
-[Henry Andersen - Master Lead Sheet](https://docs.google.com/spreadsheets/d/19tpKDOSIJwPxz2UbPem6_LPhI1pRYJiX_NuJLXrGQ4k/edit)
+Henry Andersen - Master Lead Sheet (new sheet; add its link here)
 through the Apps Script in `google-sheets/lead-capture.gs`. The application answers and the booking time are
 then filled into that person's row, matched by email:
 
