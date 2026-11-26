@@ -4,7 +4,7 @@
    Needs /assets/lead-form.js (phone rules, tidyName, emailOk) and /assets/vimeo-player.min.js first. */
 
 const CONFIG = {
-  leadSheetUrl: "" /* TODO: paste Henry's Apps Script /exec URL (google-sheets/lead-capture.gs) */,
+  leadSheetUrl: "https://script.google.com/macros/s/AKfycbwQXZi2FH5IEF41qGQJGkpAZJhIVEMLORR_sCQhwtqkPRKpj_t7-nOhhLW43xXb4Ls/exec",
   // The sheet's Version column: which page 2 the lead got, so the two can be compared.
   versions: { apply: "Redesign", apply2: "Redesign 2", booking: "DM Booking" },   // the sheet's Version column
   // A/B test: share of new opt-ins sent to /apply (one question at a time). The rest go to /apply-2 (the form
