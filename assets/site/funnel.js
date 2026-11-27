@@ -12,7 +12,7 @@ const CONFIG = {
   abSplitApply: 1,
   pages: { discord: "/discord", apply: "/apply", apply2: "/apply-2", booked: "/booked" },
   videos: {
-    vsl: "" /* TODO: Henry VSL Vimeo link */,
+    vsl: "https://player.vimeo.com/video/1250675607",
     nextSteps: "" /* TODO: thank-you video */,
   },
   // FAQ videos on /booked: [question, Vimeo link]. Ones without a link are left out.
